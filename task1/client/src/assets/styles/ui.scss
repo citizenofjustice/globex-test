@@ -17,26 +17,16 @@
       flex-direction: column;
       gap: 1.5rem;
       min-height: 15rem;
+      padding: 1.5rem;
 
-      .user_name {
-        font-weight: typography.$font-bold;
-        font-size: 24px;
-        line-height: 30px;
+      &:hover {
+        cursor: pointer;
       }
 
       .user_data {
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
-
-        .user_attribute {
-          display: flex;
-          gap: 0.875rem;
-
-          .attribute_value {
-            color: typography.$font-color-secondary;
-          }
-        }
       }
     }
   }
@@ -67,9 +57,39 @@
 .card {
   background: #ffffff;
   box-shadow: 0px 0px 1.25rem 0px #0000001a;
-  padding: 1.5rem;
-  gap: 1.5rem;
   border-radius: 1rem;
+}
+
+.dialog {
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 20px 0px #0000001a;
+  max-width: 35rem;
+  border: none;
+  outline: none;
+  .dialog_content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    .dialog_top {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+
+      .icon_wrapper {
+        cursor: pointer;
+      }
+    }
+
+    .dialog_data_list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+    }
+  }
 }
 
 .icon_wrapper {
@@ -80,7 +100,31 @@
   align-items: center;
 }
 
-.center-x {
+.data_item {
   display: flex;
-  justify-content: center;
+  gap: 0.875rem;
+
+  &.row {
+    flex-direction: row;
+  }
+  &.column {
+    flex-direction: column;
+  }
+
+  .item_title {
+    flex-basis: 33%;
+    font-size: 18px;
+    font-weight: typography.$font-regular;
+    line-height: 1.5rem;
+  }
+  .item_value {
+    flex-basis: 66%;
+    color: typography.$font-color-secondary;
+  }
+}
+
+.user_name {
+  font-weight: typography.$font-bold;
+  font-size: 24px;
+  line-height: 30px;
 }
