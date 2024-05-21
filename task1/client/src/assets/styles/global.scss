@@ -1,0 +1,16 @@
+@use "typography";
+
+@use "./reset.scss";
+@use "./fonts.scss";
+@use "./ui.scss";
+
+body {
+  font-family: typography.$font-family;
+  color: typography.$font-color-primary;
+}
+
+.layout {
+  padding-top: 2.5rem;
+  width: 100%;
+  min-height: 100vh;
+}
