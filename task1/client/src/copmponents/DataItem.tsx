@@ -1,6 +1,6 @@
 interface DataItemProps {
   title: string;
-  value: string;
+  value: string | undefined;
   direction?: "row" | "column";
 }
 
