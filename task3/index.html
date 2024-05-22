@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .table {
+        border: 1px solid black;
+      }
+      .cell {
+        border: 1px solid black;
+        padding: 4px 8px;
+      }
+      .title {
+        text-align: center;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="table">
+      <tr>
+        <td class="cell title">ФИО</td>
+      </tr>
+      <% arr=XQuery("for $elem in collaborators return $elem"); for (i in arr) {
+      person = OpenDoc(UrlFromDocID(Int(i.id))).TopElem; %>
+      <tr>
+        <td class="cell"><%=person.name%></td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
